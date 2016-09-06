@@ -4,10 +4,10 @@
 
 ```
 $ rot13 < example.txt
-...
+Cebsrffbe ZpTbantnyy ghearq vagb n png.
 
 $ rot13 < example.txt | rot13
-...
+Professor McGonagall turned into a cat.
 ```
 
 # REQUIREMENTS
