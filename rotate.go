@@ -30,9 +30,9 @@ func RotRune(p rune, shift int) rune {
 
 	switch {
 	case b >= UpperA && b <= UpperZ:
-		return rune((((b-UpperA)+shift)%26)+UpperA)
+		return rune((((b - UpperA) + shift) % 26) + UpperA)
 	case b >= LowerA && b <= LowerZ:
-		return rune((((b-LowerA)+shift)%26)+LowerA)
+		return rune((((b - LowerA) + shift) % 26) + LowerA)
 	default:
 		return p
 	}

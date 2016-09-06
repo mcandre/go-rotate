@@ -1,7 +1,10 @@
 package main
 
 import (
+	"bufio"
+	"fmt"
 	"github.com/mcandre/go-rotate"
+	"os"
 )
 
 func main() {
