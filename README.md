@@ -24,3 +24,9 @@ Professor McGonagall turned into a cat.
 $ go get github.com/mcandre/go-rotate
 $ go install github.com/mcandre/go-rotate/cmd/rot13
 ```
+
+# COMPILE AND INSTALL LOCALLY
+
+```
+$ sh -c 'cd cmd/rot13 && go install'
+```
