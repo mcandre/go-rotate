@@ -30,3 +30,11 @@ $ go install github.com/mcandre/go-rotate/cmd/rot13
 ```
 $ sh -c 'cd cmd/rot13 && go install'
 ```
+
+# LINT
+
+Keep the code tidy:
+
+```
+$ make lint
+```
