@@ -16,19 +16,24 @@ Professor McGonagall turned into a cat.
 
 ## Optional
 
-* [make](https://www.gnu.org/software/make/)
+* [Git](https://git-scm.com)
+* [Make](https://www.gnu.org/software/make/)
+* [Bash](https://www.gnu.org/software/bash/)
 
-# INSTALL
-
-```
-$ go get github.com/mcandre/go-rotate
-$ go install github.com/mcandre/go-rotate/cmd/rot13
-```
-
-# COMPILE AND INSTALL LOCALLY
+# INSTALL FROM REMOTE GIT REPOSITORY
 
 ```
-$ sh -c 'cd cmd/rot13 && go install'
+$ go get github.com/mcandre/go-rotate/...
+```
+
+(Yes, include the ellipsis as well, it's the magic Go syntax for downloading, building, and installing all components of a package, including any libraries and command line tools.)
+
+# INSTALL FROM LOCAL GIT REPOSITORY
+
+```
+$ mkdir -p $GOPATH/src/github.com/mcandre
+$ git clone git@github.com:mcandre/go-rotate.git $GOPATH/src/github.com/mcandre/go-rotate
+$ sh -c "cd $GOPATH/src/github.com/mcandre/go-rotate/cmd/rot13 && go install"
 ```
 
 # LINT
