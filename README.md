@@ -43,3 +43,7 @@ Keep the code tidy:
 ```
 $ make lint
 ```
+
+# GIT HOOKS
+
+See `hooks/`.
