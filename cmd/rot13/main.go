@@ -3,8 +3,9 @@ package main
 import (
 	"bufio"
 	"fmt"
-	"github.com/mcandre/go-rotate"
 	"os"
+
+	"github.com/mcandre/go-rotate"
 )
 
 func main() {
