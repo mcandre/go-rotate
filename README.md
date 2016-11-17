@@ -37,6 +37,18 @@ $ git clone git@github.com:mcandre/go-rotate.git $GOPATH/src/github.com/mcandre/
 $ sh -c "cd $GOPATH/src/github.com/mcandre/go-rotate/cmd/rot13 && go install"
 ```
 
+# TEST REMOTELY
+
+```
+$ go test github.com/mcandre/go-rotate/...
+```
+
+# TEST LOCALLY
+
+```
+$ go test
+```
+
 # LINT
 
 Keep the code tidy:

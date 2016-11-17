@@ -1,6 +1,9 @@
-all: test
+all: gotest
 
-test:
+gotest:
+	go test
+
+integration-test:
 	rot13 < example.txt
 	rot13 < example.txt | rot13
 
