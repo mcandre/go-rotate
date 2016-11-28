@@ -49,6 +49,14 @@ $ go test github.com/mcandre/go-rotate/...
 $ go test
 ```
 
+# BUILD AND ARCHIVE PORTS
+
+```
+$ make port
+...
+Archived ports in bin/rotate-0.0.1.zip
+```
+
 # LINT
 
 Keep the code tidy:
