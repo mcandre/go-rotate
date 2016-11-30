@@ -23,7 +23,7 @@ goimport:
 lint: govet gofmt goimport
 
 port:
-	sh port.sh rotate $(VERSION) bin cmd
+	goport -a rotate -l $(VERSION)
 
 clean: clean-ports
 

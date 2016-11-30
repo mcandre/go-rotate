@@ -24,6 +24,7 @@ https://github.com/mcandre/go-rotate/releases
 * [Make](https://www.gnu.org/software/make/)
 * [Bash](https://www.gnu.org/software/bash/)
 * [goimports](https://godoc.org/golang.org/x/tools/cmd/goimports) (e.g. `go get golang.org/x/tools/cmd/goimports`)
+* [goport](https://github.com/mcandre/goport) (e.g. `go get github.com/mcandre/goport/...`)
 
 # INSTALL FROM REMOTE GIT REPOSITORY
 
@@ -53,12 +54,10 @@ $ go test github.com/mcandre/go-rotate/...
 $ go test
 ```
 
-# BUILD AND ARCHIVE PORTS
+# PORT
 
 ```
 $ make port
-...
-Archived ports in bin/rotate-0.0.1.zip
 ```
 
 # LINT
