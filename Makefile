@@ -22,8 +22,13 @@ goimport:
 
 lint: govet gofmt goimport
 
-port:
-	goport -a rotate -l $(VERSION)
+port: archive-ports
+
+archive-ports: bin
+	zipc -C bin "rotate-$(VERSION).zip" "rotate-$(VERSION)"
+
+bin:
+	gox --output="bin/rotate-$(VERSION)/{{.OS}}/{{.Arch}}/{{.Dir}}" ./cmd/...
 
 clean: clean-ports
 
