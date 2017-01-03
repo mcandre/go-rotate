@@ -1,3 +1,4 @@
+// Package main provides a rot13 executable.
 package main
 
 import (
@@ -8,6 +9,7 @@ import (
 	"github.com/mcandre/go-rotate"
 )
 
+// main is the entrypoint for launching this application.
 func main() {
 	scanner := bufio.NewScanner(os.Stdin)
 
