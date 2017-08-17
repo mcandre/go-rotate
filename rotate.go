@@ -18,11 +18,9 @@ func Rot13(plaintext string) string {
 
 // Rot is a symmetric encryption and decryption function for an arbitrary Caesar shift on strings.
 func Rot(plaintext string, shift int) string {
-	plainBytes := []rune(plaintext)
-
 	var ciphertext bytes.Buffer
 
-	for _, e := range plainBytes {
+	for _, e := range plaintext {
 		ciphertext.WriteRune(RotRune(e, shift))
 	}
 
