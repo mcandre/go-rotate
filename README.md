@@ -51,7 +51,7 @@ $ go get github.com/mcandre/go-rotate/...
 
 ```
 $ mkdir -p $GOPATH/src/github.com/mcandre
-$ git clone git@github.com:mcandre/go-rotate.git $GOPATH/src/github.com/mcandre/go-rotate
+$ git clone https://github.com/mcandre/go-rotate.git $GOPATH/src/github.com/mcandre/go-rotate
 $ sh -c "cd $GOPATH/src/github.com/mcandre/go-rotate/cmd/rot13 && go install"
 ```
 
