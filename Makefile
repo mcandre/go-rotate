@@ -26,6 +26,9 @@ goimport:
 errcheck:
 	errcheck -blank
 
+nakedret:
+	nakedret -l 0 ./...
+
 opennota-check:
 	aligncheck
 	structcheck
@@ -49,7 +52,7 @@ shellcheck:
 editorconfig:
 	flcl . | xargs -n 100 editorconfig-cli check
 
-lint: govet golint gofmt goimport errcheck opennota-check megacheck bashate shlint checkbashisms shellcheck editorconfig
+lint: govet golint gofmt goimport errcheck nakedret opennota-check megacheck bashate shlint checkbashisms shellcheck editorconfig
 
 port: archive-ports
 
