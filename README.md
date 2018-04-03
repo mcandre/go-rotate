@@ -25,6 +25,9 @@ https://godoc.org/github.com/mcandre/go-rotate
 # BUILDTIME REQUIREMENTS
 
 * [Go](https://golang.org/) 1.9+
+
+## Recommended
+
 * [Docker](https://www.docker.com/)
 * [Mage](https://magefile.org/) (e.g., `go get github.com/magefile/mage`)
 * [goimports](https://godoc.org/golang.org/x/tools/cmd/goimports) (e.g. `go get golang.org/x/tools/cmd/goimports`)
@@ -33,9 +36,6 @@ https://godoc.org/github.com/mcandre/go-rotate
 * [nakedret](https://github.com/alexkohler/nakedret) (e.g. `go get github.com/alexkohler/nakedret`)
 * [goxcart](https://github.com/mcandre/goxcart) (e.g., `github.com/mcandre/goxcart/...`)
 * [zipc](https://github.com/mcandre/zipc) (e.g. `go get github.com/mcandre/zipc/...`)
-
-## Recommended
-
 * [karp](https://github.com/mcandre/karp) (e.g., `go get github.com/mcandre/karp/...`)
 
 # INSTALL FROM REMOTE GIT REPOSITORY
