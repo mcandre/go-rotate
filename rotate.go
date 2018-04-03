@@ -3,6 +3,9 @@ package rotate
 
 import "bytes"
 
+// Version is semver.
+var Version = "0.0.2"
+
 // ASCII code points.
 const (
 	UpperA = int('A')

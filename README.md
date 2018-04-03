@@ -18,27 +18,25 @@ https://github.com/mcandre/go-rotate/releases
 
 https://godoc.org/github.com/mcandre/go-rotate
 
-# DEVELOPMENT REQUIREMENTS
+# RUNTIME REQUIREMENTS
 
-* [Go](https://golang.org) 1.7+ with [$GOPATH configured](https://gist.github.com/mcandre/ef73fb77a825bd153b7836ddbd9a6ddc)
+(None)
 
-## Optional
+# BUILDTIME REQUIREMENTS
 
-* [coreutils](https://www.gnu.org/software/coreutils/coreutils.html)
-* [make](https://www.gnu.org/software/make/)
+* [Go](https://golang.org/) 1.9+
+* [Docker](https://www.docker.com/)
+* [Mage](https://magefile.org/) (e.g., `go get github.com/magefile/mage`)
 * [goimports](https://godoc.org/golang.org/x/tools/cmd/goimports) (e.g. `go get golang.org/x/tools/cmd/goimports`)
 * [golint](https://github.com/golang/lint) (e.g. `go get github.com/golang/lint/golint`)
 * [errcheck](https://github.com/kisielk/errcheck) (e.g. `go get github.com/kisielk/errcheck`)
 * [nakedret](https://github.com/alexkohler/nakedret) (e.g. `go get github.com/alexkohler/nakedret`)
-* [opennota/check](https://github.com/opennota/check) (e.g. `go get github.com/opennota/check/cmd/...`)
-* [megacheck](https://github.com/dominikh/go-tools/tree/master/cmd/megacheck) (e.g. `go get github.com/dominikh/go-tools/cmd/megacheck`)
-* [gox](https://github.com/mitchellh/gox) (e.g. `go get github.com/mitchellh/gox`)
+* [goxcart](https://github.com/mcandre/goxcart) (e.g., `github.com/mcandre/goxcart/...`)
 * [zipc](https://github.com/mcandre/zipc) (e.g. `go get github.com/mcandre/zipc/...`)
-* [editorconfig-cli](https://github.com/amyboyd/editorconfig-cli) (e.g. `go get github.com/amyboyd/editorconfig-cli`)
-* [flcl](https://github.com/mcandre/flcl) (e.g. `go get github.com/mcandre/flcl/...`)
-* [bashate](https://github.com/openstack-dev/bashate)
-* [shlint](https://rubygems.org/gems/shlint)
-* [shellcheck](http://hackage.haskell.org/package/ShellCheck)
+
+## Recommended
+
+* [karp](https://github.com/mcandre/karp) (e.g., `go get github.com/mcandre/karp/...`)
 
 # INSTALL FROM REMOTE GIT REPOSITORY
 
@@ -53,25 +51,21 @@ $ go get github.com/mcandre/go-rotate/...
 ```
 $ mkdir -p $GOPATH/src/github.com/mcandre
 $ git clone https://github.com/mcandre/go-rotate.git $GOPATH/src/github.com/mcandre/go-rotate
-$ sh -c "cd $GOPATH/src/github.com/mcandre/go-rotate/cmd/rot13 && go install"
+$ cd "$GOPATH/src/github.com/mcandre/go-rotate"
+$ git submodule update --init --recursive
+$ go install ./...
 ```
 
-# TEST REMOTELY
+# TEST
 
 ```
-$ go test github.com/mcandre/go-rotate/...
-```
-
-# TEST LOCALLY
-
-```
-$ go test
+$ mage test
 ```
 
 # PORT
 
 ```
-$ make port
+$ mage port
 ```
 
 # LINT
@@ -79,9 +73,5 @@ $ make port
 Keep the code tidy:
 
 ```
-$ make lint
+$ mage lint
 ```
-
-# GIT HOOKS
-
-See `hooks/`.
