@@ -2,7 +2,7 @@
 
 # EXAMPLES
 
-```
+```console
 $ rot13 < example.txt
 Cebsrffbe ZpTbantnyy ghearq vagb n png.
 
@@ -24,7 +24,7 @@ https://godoc.org/github.com/mcandre/go-rotate
 
 # BUILDTIME REQUIREMENTS
 
-* [Go](https://golang.org/) 1.9+
+* [Go](https://golang.org/) 1.11+
 
 ## Recommended
 
