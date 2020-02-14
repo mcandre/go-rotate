@@ -8,10 +8,10 @@ var Version = "0.0.2"
 
 // ASCII code points.
 const (
-	UpperA = int('A')
-	UpperZ = int('Z')
-	LowerA = int('a')
-	LowerZ = int('z')
+	upperA = rune('A')
+	upperZ = rune('Z')
+	lowerA = rune('a')
+	lowerZ = rune('z')
 )
 
 // Rot13 is a symmetric encryption and decryption function for a Caesar shift of 13 on strings.
@@ -31,15 +31,13 @@ func Rot(plaintext string, shift int) string {
 }
 
 // RotRune is a symmetric encryption and decryption function for an arbitrary Caesar shift on individual runes.
-func RotRune(p rune, shift int) rune {
-	b := int(p)
-
+func RotRune(b rune, shift int) rune {
 	switch {
-	case b >= UpperA && b <= UpperZ:
-		return rune((((b - UpperA) + shift) % 26) + UpperA)
-	case b >= LowerA && b <= LowerZ:
-		return rune((((b - LowerA) + shift) % 26) + LowerA)
+	case b >= upperA && b <= upperZ:
+		return ((b - upperA + rune(shift)) % 26) + upperA
+	case b >= lowerA && b <= lowerZ:
+		return ((b - lowerA + rune(shift)) % 26) + lowerA
 	default:
-		return p
+		return b
 	}
 }
